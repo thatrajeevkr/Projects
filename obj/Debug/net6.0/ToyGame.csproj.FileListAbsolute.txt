@@ -1,0 +1,15 @@
+C:\Users\Kr\Documents\ToyGame\bin\Debug\net6.0\ToyGame.exe
+C:\Users\Kr\Documents\ToyGame\bin\Debug\net6.0\ToyGame.deps.json
+C:\Users\Kr\Documents\ToyGame\bin\Debug\net6.0\ToyGame.runtimeconfig.json
+C:\Users\Kr\Documents\ToyGame\bin\Debug\net6.0\ToyGame.dll
+C:\Users\Kr\Documents\ToyGame\bin\Debug\net6.0\ToyGame.pdb
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.csproj.AssemblyReference.cache
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.AssemblyInfoInputs.cache
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.AssemblyInfo.cs
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.csproj.CoreCompileInputs.cache
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.dll
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\refint\ToyGame.dll
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.pdb
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ToyGame.genruntimeconfig.cache
+C:\Users\Kr\Documents\ToyGame\obj\Debug\net6.0\ref\ToyGame.dll
