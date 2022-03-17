@@ -7,15 +7,7 @@ namespace ToyGame
 {
     class Program
     {
-        public enum Command
-    {
-        PlaceRobot,
-        PlaceWall,
-        Move,
-        Left,
-        Right,
-        Report
-    }
+        
         static void Main(string[] args)
         {
             IPlayBoard squareBoard = new PlayBoard(5, 5);

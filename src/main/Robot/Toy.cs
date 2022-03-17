@@ -3,6 +3,15 @@ using Game.Robot.Interface;
 using Game.PlayBoard;
 namespace Game.Robot
 {
+    public enum Command
+    {
+        PlaceRobot,
+        PlaceWall,
+        Move,
+        Left,
+        Right,
+        Report
+    }
 
     public class Toy : IToy
     {
