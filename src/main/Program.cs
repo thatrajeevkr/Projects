@@ -1,15 +1,41 @@
 ﻿using System;
 using Game.PlayBoard;
 using Game.PlayBoard.Interface;
+using Game.Robot;
+using Game.Robot.Interface;
 namespace ToyGame
 {
     class Program
     {
+        public enum Command
+    {
+        PlaceRobot,
+        PlaceWall,
+        Move,
+        Left,
+        Right,
+        Report
+    }
         static void Main(string[] args)
         {
-            PlayBoard squareBoard = new PlayBoard(5, 5);
-            string command = Console.ReadLine();
-            Console.WriteLine(command);
+            IPlayBoard squareBoard = new PlayBoard(5, 5);
+            IToy toy = new Toy();
+            Movement movement = new Movement(toy, squareBoard);
+            var stopApp = false;
+            do
+            {   
+                Console.WriteLine("Enter Input \n");
+                string command = Console.ReadLine();
+                if (command.Equals("EXIT"))
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    movement.InCommand(command.Split(' '));
+                }
+                Console.WriteLine(command);
+            }while(!stopApp);
         }
     }
 }
