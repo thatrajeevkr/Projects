@@ -7,6 +7,7 @@ namespace Game.Robot
 {
     public class Movement
     {
+        public static int[,] wall= new int[10,10];
         public IToy Toy {get;set;}
         public IPlayBoard playBoard {get;set;}
         public Movement(IToy toy,IPlayBoard playboard)
@@ -21,7 +22,7 @@ namespace Game.Robot
                 throw new ArgumentException("Invalid Command");
             else
             {
-                var wall= new int[10,10];
+                
                 switch(args[0])
                 {
                     case "PLACE_ROBOT":
