@@ -39,14 +39,10 @@ namespace Game.Robot
                         var newPosition = Toy.GetNextPosition(wall);
                         if(playBoard.IsValidPosition(newPosition))
                         Toy.Place(newPosition, Toy.Direction);
-                        else if(newPosition.X>5)
-                        Toy.Place(new Position(1,newPosition.Y), Toy.Direction);
-                        else if(newPosition.Y>5)
-                        Toy.Place(new Position(newPosition.X,1), Toy.Direction);
-                        else if(newPosition.X<=0)
-                        Toy.Place(new Position(5,newPosition.Y), Toy.Direction);
-                        else if(newPosition.Y<=0)
-                        Toy.Place(new Position(newPosition.X,5), Toy.Direction);
+                        else 
+                        {
+                            OutofBoundsWallMove(newPosition);
+                        }
                         break;
                     case "REPORT": 
                         Console.WriteLine("{0},{1},{2}", Toy.Position.X,
@@ -65,6 +61,17 @@ namespace Game.Robot
             }          
             
 
+        }
+        public void OutofBoundsWallMove(Position newPosition)
+        {
+            if(newPosition.X>5)
+                Toy.Place(new Position(1,newPosition.Y), Toy.Direction);
+            else if(newPosition.Y>5)
+                Toy.Place(new Position(newPosition.X,1), Toy.Direction);
+            else if(newPosition.X<=0)
+                Toy.Place(new Position(5,newPosition.Y), Toy.Direction);
+            else if(newPosition.Y<=0)
+                Toy.Place(new Position(newPosition.X,5), Toy.Direction);
         }
     }
 }
