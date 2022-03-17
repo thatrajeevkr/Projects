@@ -5,12 +5,12 @@ namespace Game.Robot
 {
     public enum Command
     {
-        PlaceRobot,
-        PlaceWall,
-        Move,
-        Left,
-        Right,
-        Report
+        PLACE_ROBOT,
+        PLACE_WALL,
+        MOVE,
+        LEFT,
+        RIGHT,
+        REPORT
     }
 
     public class Toy : IToy

@@ -26,7 +26,6 @@ namespace ToyGame
                 {
                     movement.InCommand(command.Split(' '));
                 }
-                Console.WriteLine(command);
             }while(!stopApp);
         }
     }
