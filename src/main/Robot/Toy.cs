@@ -24,6 +24,26 @@ namespace Game.Robot
             this.Direction = direction;
         }
 
+        public Position GetNextPosition()
+        {
+            var newPosition = new Position(Position.X, Position.Y);
+            switch (Direction)
+            {
+                case "NORTH":
+                    newPosition.Y = newPosition.Y + 1;
+                    break;
+                case "EAST":
+                    newPosition.X = newPosition.X + 1;
+                    break;
+                case "SOUTH":
+                    newPosition.Y = newPosition.Y - 1;
+                    break;
+                case "WEST":
+                    newPosition.X = newPosition.X - 1;
+                    break;
+            }
+            return newPosition;
+        }
         
 
     }

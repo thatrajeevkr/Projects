@@ -28,8 +28,22 @@ namespace Game.Robot
                         if(playBoard.IsValidPosition(new Position(Convert.ToInt32(inputs[0]),Convert.ToInt32(inputs[1]))))
                         Toy.Place(new Position(Convert.ToInt32(inputs[0]),Convert.ToInt32(inputs[1])), inputs[2]);
                         break;
-                    case "PLACE_WALL": break;
-                    case "MOVE": break;
+                    case "PLACE_WALL":
+                        
+                        break;
+                    case "MOVE": 
+                        var newPosition = Toy.GetNextPosition();
+                        if(playBoard.IsValidPosition(newPosition))
+                        Toy.Place(newPosition, Toy.Direction);
+                        else if(newPosition.X>5)
+                        Toy.Place(new Position(1,newPosition.Y), Toy.Direction);
+                        else if(newPosition.Y>5)
+                        Toy.Place(new Position(newPosition.X,1), Toy.Direction);
+                        else if(newPosition.X<=0)
+                        Toy.Place(new Position(5,newPosition.Y), Toy.Direction);
+                        else if(newPosition.Y<=0)
+                        Toy.Place(new Position(newPosition.X,5), Toy.Direction);
+                        break;
                     case "REPORT": 
                         Console.WriteLine("{0},{1},{2}", Toy.Position.X,
                         Toy.Position.Y, Toy.Direction);

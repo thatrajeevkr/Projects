@@ -9,7 +9,6 @@ namespace Game.PlayBoard
     {
         public int Rows { get; private set; }
         public int Columns { get; private set; }
-        public bool Wallcheck { get; private set;}
 
         public PlayBoard(int rows, int columns)
         {
@@ -20,8 +19,8 @@ namespace Game.PlayBoard
         //Check if position entered is valid
         public bool IsValidPosition(Position position)
         {
-            return position.X < Columns && position.X >= 0 && 
-                   position.Y < Rows && position.Y >= 0;
+            return position.X <= Columns && position.X >= 1 && 
+                   position.Y <= Rows && position.Y >= 1 && position.Wallcheck==false;
         }
     }
 }

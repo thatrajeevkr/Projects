@@ -7,11 +7,12 @@ namespace Game.PlayBoard
     {
         public int X { get; set; }
         public int Y { get; set; }
-
+        public bool Wallcheck { get; set;}
         public Position(int x, int y)
         {
             this.X = x;
             this.Y = y;
+            this.Wallcheck=false;
         }
     }
 }
