@@ -24,22 +24,44 @@ namespace Game.Robot
             this.Direction = direction;
         }
 
-        public Position GetNextPosition()
+        public Position GetNextPosition(int[,] wall)
         {
             var newPosition = new Position(Position.X, Position.Y);
             switch (Direction)
             {
                 case "NORTH":
-                    newPosition.Y = newPosition.Y + 1;
+                    if(wall[newPosition.X,newPosition.Y+1]==1)
+                    {
+                        newPosition.Y = newPosition.Y + 2;
+                    }
+                    else
+                    {
+                        newPosition.Y = newPosition.Y + 1;
+                    }
                     break;
                 case "EAST":
-                    newPosition.X = newPosition.X + 1;
+                    if(wall[newPosition.X+1,newPosition.Y]==1)
+                    newPosition.X = newPosition.X + 2;
+                    else
+                    {
+                        newPosition.X = newPosition.X + 1;
+                    }
                     break;
                 case "SOUTH":
-                    newPosition.Y = newPosition.Y - 1;
+                    if(wall[newPosition.X,newPosition.Y-1]==1)
+                    newPosition.Y = newPosition.Y - 2;
+                    else
+                    {
+                        newPosition.Y = newPosition.Y - 1;
+                    }
                     break;
                 case "WEST":
-                    newPosition.X = newPosition.X - 1;
+                    if(wall[newPosition.X-1,newPosition.Y]==1)
+                    newPosition.X = newPosition.X - 2;
+                    else
+                    {
+                        newPosition.X = newPosition.X - 1;
+                    }
                     break;
             }
             return newPosition;

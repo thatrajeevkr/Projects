@@ -14,9 +14,9 @@ namespace ToyGame
             IToy toy = new Toy();
             Movement movement = new Movement(toy, squareBoard);
             var stopApp = false;
+            Console.WriteLine("Enter Input");
             do
             {   
-                Console.WriteLine("Enter Input \n");
                 string command = Console.ReadLine();
                 if (command.Equals("EXIT"))
                 {

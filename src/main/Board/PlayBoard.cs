@@ -9,7 +9,6 @@ namespace Game.PlayBoard
     {
         public int Rows { get; private set; }
         public int Columns { get; private set; }
-
         public PlayBoard(int rows, int columns)
         {
             this.Rows = rows;

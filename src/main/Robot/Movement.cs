@@ -21,6 +21,7 @@ namespace Game.Robot
                 throw new ArgumentException("Invalid Command");
             else
             {
+                var wall= new int[10,10];
                 switch(args[0])
                 {
                     case "PLACE_ROBOT":
@@ -29,10 +30,12 @@ namespace Game.Robot
                         Toy.Place(new Position(Convert.ToInt32(inputs[0]),Convert.ToInt32(inputs[1])), inputs[2]);
                         break;
                     case "PLACE_WALL":
-                        
+                    string[] inp = args[1].Split(',');
+                        if(playBoard.IsValidPosition(new Position(Convert.ToInt32(inp[0]),Convert.ToInt32(inp[1]))))
+                        wall[Convert.ToInt32(inp[0]), Convert.ToInt32(inp[1])] = 1;
                         break;
                     case "MOVE": 
-                        var newPosition = Toy.GetNextPosition();
+                        var newPosition = Toy.GetNextPosition(wall);
                         if(playBoard.IsValidPosition(newPosition))
                         Toy.Place(newPosition, Toy.Direction);
                         else if(newPosition.X>5)
