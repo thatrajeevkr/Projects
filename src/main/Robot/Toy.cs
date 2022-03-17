@@ -44,6 +44,35 @@ namespace Game.Robot
             }
             return newPosition;
         }
+
+        public string GetNextDirection(string rotation)
+        {
+            string newDirection = "";
+            switch (Direction)
+            {
+                case "NORTH":
+                    if(rotation=="LEFT")
+                    newDirection = "WEST";
+                    else newDirection="EAST";
+                    break;
+                case "EAST":
+                    if(rotation=="LEFT")
+                    newDirection = "NORTH";
+                    else newDirection="SOUTH";
+                    break;
+                case "SOUTH":
+                    if(rotation=="LEFT")
+                    newDirection = "EAST";
+                    else newDirection="WEST";
+                    break;
+                case "WEST":
+                    if(rotation=="LEFT")
+                    newDirection = "SOUTH";
+                    else newDirection="NORTH";
+                    break;
+            }
+            return newDirection;
+        }
         
 
     }

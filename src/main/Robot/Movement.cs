@@ -48,8 +48,14 @@ namespace Game.Robot
                         Console.WriteLine("{0},{1},{2}", Toy.Position.X,
                         Toy.Position.Y, Toy.Direction);
                         break;
-                    case "LEFT": break;
-                    case "RIGHT": break;
+                    case "LEFT": 
+                        var newDirection = Toy.GetNextDirection("LEFT");
+                        Toy.Direction=newDirection;
+                        break;
+                    case "RIGHT": 
+                        var neDirection = Toy.GetNextDirection("RIGHT");
+                        Toy.Direction=neDirection;
+                        break;
 
                 }
             }          

@@ -7,5 +7,6 @@ namespace Game.Robot.Interface
         public string Direction { get; set; }
         void Place(Position position, string direction);
         public Position GetNextPosition();
+        public string GetNextDirection(string rotation);
     }
 }
