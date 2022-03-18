@@ -5,11 +5,11 @@ namespace Game.PlayBoard
     /// <summary>
     /// Main Playing Board with Rows and Columns as Properties, Along with check function
     /// </summary>
-    public class PlayBoard : IPlayBoard
+    public class PlayBoards : IPlayBoard
     {
         public int Rows { get; private set; }
         public int Columns { get; private set; }
-        public PlayBoard(int rows, int columns)
+        public PlayBoards(int rows, int columns)
         {
             this.Rows = rows;
             this.Columns = columns;

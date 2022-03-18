@@ -10,7 +10,7 @@ namespace ToyGame
         
         static void Main(string[] args)
         {
-            IPlayBoard squareBoard = new PlayBoard(5, 5);
+            IPlayBoard squareBoard = new PlayBoards(5, 5);
             IToy toy = new Toy();
             Movement movement = new Movement(toy, squareBoard);
             var stopApp = false;
